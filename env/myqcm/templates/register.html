@@ -1,0 +1,26 @@
+{% load static %}
+{% block content %}
+
+
+
+   <div class="row">
+    <div class="col-md-12">
+        {% if registered %}
+            <h2>vous etes déjà enregistrer</h2>
+        {%  endif %}
+            <form method="POST" action="" >
+                
+                {% csrf_token %}
+                {{ form1.as_p }}
+                {{ form2.as_p }}
+
+
+                <input type="submit" value="save">
+            
+            </form>
+
+
+    </div>
+   </div>
+
+{% endblock content %}

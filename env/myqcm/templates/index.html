@@ -1,0 +1,17 @@
+{% load static %}
+{% block content %}
+{% comment %}
+    <p>hello</p>
+{% endcomment %}
+
+
+   
+
+    <form method="POST">
+        {{lf}}
+        {% csrf_token %}
+
+        <input type="submit" value="save">
+       
+    </form>
+{% endblock content %}
